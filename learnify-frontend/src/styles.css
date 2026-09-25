@@ -1,0 +1,536 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #25252b;
+  background: #f6f6f8;
+  line-height: 1.5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.button {
+  display: inline-block;
+  border: 0;
+  border-radius: 7px;
+  background: #7765c7;
+  color: #fff;
+  padding: 12px 18px;
+  font-weight: 700;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8578c8;
+  margin: 0 0 9px;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.landing {
+  min-height: 100vh;
+  background: #fff;
+}
+.landing nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;
+  padding: 28px;
+  margin: auto;
+}
+.landing nav div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.hero {
+  max-width: 1150px;
+  margin: 110px auto;
+  padding: 0 28px;
+}
+.hero h1 {
+  font-size: clamp(45px, 7vw, 78px);
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+.hero > p:not(.eyebrow) {
+  max-width: 480px;
+  font-size: 19px;
+  color: #666875;
+  margin: 28px 0;
+}
+.auth {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.auth section {
+  width: min(440px, calc(100% - 36px));
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 16px 45px #25252b1f;
+}
+.auth .logo {
+  display: block;
+  margin-bottom: 42px;
+  color: #7765c7;
+}
+.auth .eyebrow {
+  margin: 0;
+}
+.auth h1 {
+  font-size: 32px;
+  margin: 0 0 27px;
+  letter-spacing: -0.04em;
+}
+.auth aside {
+  display: none;
+}
+.auth form {
+  display: grid;
+  gap: 18px;
+}
+.auth span {
+  display: block;
+  margin-top: 22px;
+  color: #646470;
+}
+.auth span a {
+  color: #6e5ab9;
+  font-weight: 700;
+}
+.wide {
+  width: 100%;
+}
+.field,
+label {
+  display: grid;
+  gap: 7px;
+  font-weight: 600;
+  font-size: 14px;
+}
+input,
+textarea {
+  border: 1px solid #dedee5;
+  border-radius: 7px;
+  padding: 11px 12px;
+  background: #fff;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border-color: #7765c7;
+  box-shadow: 0 0 0 3px #7765c721;
+}
+.error {
+  color: #bc3957;
+  font-size: 14px;
+  margin: 8px 0;
+}
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 244px 1fr;
+  --accent: #7968c9;
+  --tint: #f0edfd;
+}
+.shell.teacher {
+  --accent: #74a928;
+  --tint: #eff8df;
+}
+.shell.admin {
+  --accent: #c96d76;
+  --tint: #fff0f1;
+}
+.shell aside {
+  padding: 34px 22px;
+  background: #fff;
+  border-right: 1px solid #e7e7ea;
+  display: flex;
+  flex-direction: column;
+}
+.identity {
+  margin: 47px 10px 25px;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  display: grid;
+}
+.identity small {
+  color: #85858f;
+  text-transform: capitalize;
+}
+.shell aside nav {
+  display: grid;
+  gap: 5px;
+}
+.shell aside nav a {
+  padding: 11px 13px;
+  border-radius: 7px;
+  color: #6f6f79;
+  font-weight: 600;
+}
+.shell aside nav a:hover,
+.shell aside nav .selected {
+  color: #25252b;
+  background: var(--tint);
+}
+.main header {
+  height: 76px;
+  background: #fff;
+  border-bottom: 1px solid #e7e7ea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  color: #777783;
+  font-size: 14px;
+}
+.logout {
+  border: 0;
+  background: transparent;
+  color: #4d4d58;
+  font-weight: 700;
+}
+.main > main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 45px;
+}
+.title {
+  margin-bottom: 38px;
+}
+.title h1 {
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+.title > p:last-child {
+  color: #72727d;
+  margin: 14px 0 0;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 27px;
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 10px;
+  margin: 11px 0;
+}
+.question h2 {
+  font-size: 19px;
+  margin: 4px 0 13px;
+}
+.muted {
+  font-size: 13px;
+  color: #777783;
+  margin: 0;
+}
+.role-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #555561;
+}
+.role-info b {
+  font-weight: 700;
+}
+.role-info small {
+  font-size: 13px;
+  color: #555561;
+}
+.username-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.username-link:hover {
+  text-decoration: none;
+}
+.badge {
+  font-style: normal;
+  font-size: 10px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.badge.student {
+  background: #eeeafd;
+  color: #6755b5;
+}
+.badge.teacher {
+  background: #e9f6d8;
+  color: #568313;
+}
+.badge.admin {
+  background: #fde8ea;
+  color: #ad5260;
+}
+.plain,
+.vote {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.vote.voted {
+  color: #9797a0;
+}
+.delete {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  border: 0;
+  background: #fff0f2;
+  color: #b53751;
+  border-radius: 6px;
+  padding: 7px 10px;
+  height: max-content;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #20202b80;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+}
+.modal > section {
+  width: min(700px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+}
+.modal h2 {
+  font-size: 25px;
+  margin: 0 0 20px;
+}
+.close {
+  position: absolute;
+  right: 19px;
+  top: 12px;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  color: #777;
+}
+.answer-form {
+  display: grid;
+  gap: 11px;
+  padding: 17px;
+  background: var(--tint);
+  border-radius: 8px;
+}
+.answer-form textarea,
+.card textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+.answer {
+  position: relative;
+  border-bottom: 1px solid #ededf0;
+  padding: 20px 0;
+}
+.answer p {
+  margin: 7px 0 12px;
+}
+.answer .delete {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e9e9ed;
+}
+.profile h1 {
+  font-size: 34px;
+  margin: 0;
+}
+.profile p {
+  margin: 2px 0;
+  color: #777;
+}
+.profile > strong {
+  margin-left: auto;
+  font-size: 27px;
+  color: var(--accent);
+}
+.profile strong small {
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+}
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 30px;
+}
+.single-column {
+  margin-top: 30px;
+}
+.columns h2,
+.single-column h2 {
+  font-size: 20px;
+}
+.item {
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 15px;
+}
+.item a {
+  display: block;
+}
+.item a:hover {
+  text-decoration: none;
+}
+.empty {
+  color: #81818b;
+  padding: 18px;
+  background: #fff;
+  border-radius: 8px;
+}
+.board {
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.board a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #ededf0;
+  cursor: pointer;
+}
+.board a:last-child {
+  border: 0;
+}
+.board b {
+  color: var(--accent);
+  width: 25px;
+}
+.board span {
+  display: grid;
+  font-weight: 700;
+}
+.board small {
+  font-weight: 400;
+  color: #81818b;
+}
+.board em {
+  margin-left: auto;
+  color: #5c5c66;
+  font-style: normal;
+  font-weight: 700;
+}
+.card {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 10px;
+  max-width: 700px;
+}
+.grid {
+  grid-template-columns: 1fr 1fr;
+}
+.grid .status,
+.grid .button,
+.grid .error {
+  grid-column: 1/-1;
+}
+.status {
+  color: #577f1d;
+  margin: 0;
+}
+.student .button {
+  background: #7968c9;
+}
+.teacher .button {
+  background: #74a928;
+}
+.admin .button {
+  background: #c96d76;
+}
+.teacher .eyebrow {
+  color: #66971f;
+}
+.admin .eyebrow {
+  color: #b15c65;
+}
+@media (max-width: 720px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+  .shell aside {
+    display: none;
+  }
+  .main header {
+    padding: 0 22px;
+  }
+  .main > main {
+    padding: 35px 20px;
+  }
+  .title h1 {
+    font-size: 31px;
+  }
+  .columns,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .profile {
+    align-items: flex-start;
+  }
+  .profile > strong {
+    position: absolute;
+    right: 35px;
+  }
+  .landing nav {
+    padding: 22px;
+  }
+  .hero {
+    margin: 80px auto;
+  }
+  .hero h1 {
+    font-size: 45px;
+  }
+}
