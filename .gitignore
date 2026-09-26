@@ -1,10 +1,11 @@
-# Frontend dependencies and generated files
+#
 learnify-frontend/node_modules/
 learnify-frontend/dist/
 learnify-frontend/.vite/
 
-# Backend build output
+# Backend
 learnify-backend/target/
+learnify-backend/src/main/resources/application-arbin.properties
 
 # Local environment and secrets
 .env

@@ -83,28 +83,19 @@ function App() {
 function Landing() {
   return (
     <main className="landing">
-      <nav>
-        <Logo />
-        <div>
-          <a href="#/login">Log in</a>
+      <section className="welcome">
+        <h1>
+          Welcome to <span>Learnify</span>
+        </h1>
+        <p>A peer learning platform</p>
+        <div className="welcome-actions">
           <a className="button" href="#/register">
-            Create account
+            Register
+          </a>
+          <a className="button login-button" href="#/login">
+            Log in
           </a>
         </div>
-      </nav>
-      <section className="hero">
-        <p className="eyebrow">A LEARNING COMMUNITY</p>
-        <h1>
-          Ask better questions.
-          <br />
-          Find better answers.
-        </h1>
-        <p>
-          Learnify helps students and teachers grow through useful discussion.
-        </p>
-        <a className="button" href="#/register">
-          Get started
-        </a>
       </section>
     </main>
   );
